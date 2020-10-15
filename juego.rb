@@ -21,6 +21,6 @@ elsif (player == "piedra" && random_answer == "tijera") or (player == "tijera" &
   puts "Ganaste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
 elsif (player == "tijera" && random_answer == "piedra") or (player == "papel" && random_answer == "tijera") or (player == "piedra" && random_answer == "pape")
   puts "Perdiste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
-elsif player != "papel" or player != "tijera" or player != "piedra"
+elsif player != "papel" && player != "tijera" && player != "piedra"
   puts "Argumento inválido, debes utilizar piedra, papel o tijera"
 end
