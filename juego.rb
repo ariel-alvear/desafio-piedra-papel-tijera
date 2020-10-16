@@ -15,12 +15,13 @@
 
 player = ARGV[0]
 random_answer = ["piedra", "papel", "tijera"].sample
-if player == random_answer
+
+if player != "papel" && player != "tijera" && player != "piedra"
+  puts "Argumento inválido, debes utilizar piedra, papel o tijera"
+elsif player == random_answer
   puts "Empataste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
 elsif (player == "piedra" && random_answer == "tijera") || (player == "tijera" && random_answer == "papel") || (player == "papel" && random_answer == "piedra")
   puts "Ganaste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
 elsif (player == "tijera" && random_answer == "piedra") || (player == "papel" && random_answer == "tijera") || (player == "piedra" && random_answer == "papel")
   puts "Perdiste, porque tú jugaste #{player} y el computador jugó #{random_answer}"
-elsif player != "papel" && player != "tijera" && player != "piedra"
-  puts "Argumento inválido, debes utilizar piedra, papel o tijera"
 end
